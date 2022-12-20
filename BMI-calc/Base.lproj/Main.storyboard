@@ -55,6 +55,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="180" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-Jf-c2x" userLabel="HeightSlider">
                                                 <rect key="frame" x="-2" y="20.333333333333314" width="357" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changedHeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="M75-NP-9AM"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -67,7 +70,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aA-z4-Lim" userLabel="WeightLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-V8-N7a" userLabel="CurrentWLabel">
@@ -81,6 +84,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-Ci-vA4" userLabel="WeightSlider">
                                                 <rect key="frame" x="-2" y="20.333333333333371" width="357" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changedWeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mpo-IR-Ccj"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -95,6 +101,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Calculate">
                                             <color key="baseForegroundColor" red="0.9882352941176471" green="1" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AD7-8t-FRd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -104,7 +113,7 @@
                         <constraints>
                             <constraint firstItem="5I7-r4-aFs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KVc-ij-vNj"/>
                             <constraint firstItem="qUz-TH-lfv" firstAttribute="centerX" secondItem="5I7-r4-aFs" secondAttribute="centerX" id="afQ-53-aLA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qUz-TH-lfv" secondAttribute="bottom" constant="128" id="k4o-bv-5gV"/>
+                            <constraint firstItem="qUz-TH-lfv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-128" id="k4o-bv-5gV"/>
                             <constraint firstItem="5I7-r4-aFs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="qpY-hT-pgR"/>
                             <constraint firstItem="qUz-TH-lfv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-69" id="uUG-Ez-HEk"/>
                             <constraint firstItem="qUz-TH-lfv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-66" id="vej-et-3H1"/>
@@ -112,6 +121,10 @@
                             <constraint firstItem="5I7-r4-aFs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ygj-YC-xBk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentHeightLabel" destination="BGj-fm-Gy2" id="1LJ-oS-Fi1"/>
+                        <outlet property="currentWeightLabel" destination="GKE-V8-N7a" id="RAR-rG-vrp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +145,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-ti-AOY">
-                                <rect key="frame" x="30" y="59" width="333" height="759"/>
+                                <rect key="frame" x="30" y="359" width="333" height="459"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Fk-DG-dWP">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="215"/>
@@ -141,30 +154,30 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="71.666666666666671"/>
                                                 <color key="tintColor" red="0.039215686270000001" green="0.1137254902" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
-                                                <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.98823529409999999" green="1" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="-3"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnH-05-NIn" userLabel="MainLabel">
-                                                <rect key="frame" x="0.0" y="71.666666666666657" width="333" height="71.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="71.666666666666686" width="333" height="71.666666666666686"/>
                                                 <color key="tintColor" red="0.039215686270000001" green="0.1137254902" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
-                                                <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.98823529409999999" green="1" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="-3"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eat more snacks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-zJ-h9n" userLabel="MainLabel">
-                                                <rect key="frame" x="0.0" y="143.33333333333334" width="333" height="71.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="143.33333333333331" width="333" height="71.666666666666686"/>
                                                 <color key="tintColor" red="0.039215686270000001" green="0.1137254902" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                                <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.98823529409999999" green="1" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="-3"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-q6-OVr">
-                                        <rect key="frame" x="0.0" y="709" width="333" height="50"/>
+                                        <rect key="frame" x="0.0" y="409" width="333" height="50"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RHE-C9-jTf"/>
@@ -179,15 +192,15 @@
                         <viewLayoutGuide key="safeArea" id="vUE-vo-rYD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jCi-ti-AOY" firstAttribute="top" secondItem="vUE-vo-rYD" secondAttribute="top" id="2TT-b1-0Ki"/>
-                            <constraint firstItem="vUE-vo-rYD" firstAttribute="trailing" secondItem="jCi-ti-AOY" secondAttribute="trailing" constant="30" id="3xk-Tu-Jjc"/>
+                            <constraint firstItem="jCi-ti-AOY" firstAttribute="top" secondItem="vUE-vo-rYD" secondAttribute="top" constant="300" id="2TT-b1-0Ki"/>
+                            <constraint firstItem="jCi-ti-AOY" firstAttribute="trailing" secondItem="vUE-vo-rYD" secondAttribute="trailing" constant="-30" id="3xk-Tu-Jjc"/>
                             <constraint firstItem="jCi-ti-AOY" firstAttribute="centerX" secondItem="5bj-fs-khR" secondAttribute="centerX" id="NnR-M0-Vdz"/>
                             <constraint firstItem="Qtn-WY-8OP" firstAttribute="centerX" secondItem="5bj-fs-khR" secondAttribute="centerX" id="S3l-XY-7IW"/>
                             <constraint firstItem="Qtn-WY-8OP" firstAttribute="centerY" secondItem="5bj-fs-khR" secondAttribute="centerY" id="SnD-2R-igx"/>
                             <constraint firstItem="jCi-ti-AOY" firstAttribute="leading" secondItem="vUE-vo-rYD" secondAttribute="leading" constant="30" id="tUe-xN-TLf"/>
                             <constraint firstItem="Qtn-WY-8OP" firstAttribute="top" secondItem="5bj-fs-khR" secondAttribute="top" id="wHo-Pq-kBV"/>
                             <constraint firstItem="Qtn-WY-8OP" firstAttribute="bottom" secondItem="5bj-fs-khR" secondAttribute="bottom" id="wKo-NJ-Qai"/>
-                            <constraint firstItem="vUE-vo-rYD" firstAttribute="bottom" secondItem="jCi-ti-AOY" secondAttribute="bottom" id="xbe-7q-vdk"/>
+                            <constraint firstItem="jCi-ti-AOY" firstAttribute="bottom" secondItem="vUE-vo-rYD" secondAttribute="bottom" id="xbe-7q-vdk"/>
                         </constraints>
                     </view>
                 </viewController>
