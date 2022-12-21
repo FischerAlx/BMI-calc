@@ -44,8 +44,8 @@
                                                         <color key="textColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-fm-Gy2" userLabel="CurrentHLabel">
-                                                        <rect key="frame" x="317.33333333333331" y="0.0" width="35.666666666666686" height="20.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.80m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-fm-Gy2" userLabel="CurrentHLabel">
+                                                        <rect key="frame" x="306.66666666666669" y="0.0" width="46.333333333333314" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,13 +68,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aA-z4-Lim" userLabel="WeightLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="20.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-V8-N7a" userLabel="CurrentWLabel">
-                                                        <rect key="frame" x="189.33333333333337" y="0.0" width="163.66666666666663" height="20.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-V8-N7a" userLabel="CurrentWLabel">
+                                                        <rect key="frame" x="203.66666666666663" y="0.0" width="149.33333333333337" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>

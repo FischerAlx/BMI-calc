@@ -23,17 +23,18 @@ class ViewController: UIViewController {
     
     @IBAction func pressedCalcButton(_ sender: UIButton) {
         
-        
+       
+         
     }
     
     @IBAction func changedHeightSlider(_ sender: UISlider) {
-        
+        currentHeightLabel.text = String(format: "%.2f", sender.value/100) + "m"
         
         
     }
     
     @IBAction func changedWeightSlider(_ sender: UISlider) {
-        
+        currentWeightLabel.text = String(Int(sender.value)) + "kg"
         
         
     }
