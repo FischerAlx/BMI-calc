@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentHeightLabel: UILabel!
     @IBOutlet weak var currentWeightLabel: UILabel!
     
-    
+    var currentHeight: Float = 1.8
+    var currentWeight: Float = 80
+    var BMI: Float = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +24,20 @@ class ViewController: UIViewController {
 
     
     @IBAction func pressedCalcButton(_ sender: UIButton) {
-        
-       
-         
+        print(currentHeight, currentWeight)
+        BMI = currentWeight/((currentHeight/100)*(currentHeight/100))
+        print(BMI)
     }
     
     @IBAction func changedHeightSlider(_ sender: UISlider) {
-        currentHeightLabel.text = String(format: "%.2f", sender.value/100) + "m"
-        
+        currentHeight = sender.value
+        currentHeightLabel.text = String(format: "%.2f", currentHeight/100) + "m"
         
     }
     
     @IBAction func changedWeightSlider(_ sender: UISlider) {
-        currentWeightLabel.text = String(Int(sender.value)) + "kg"
-        
+        currentWeight = sender.value
+        currentWeightLabel.text = String(Int(currentWeight)) + "kg"
         
     }
     
