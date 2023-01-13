@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentHeightLabel: UILabel!
     @IBOutlet weak var currentWeightLabel: UILabel!
     
+    var bmiValue = "0.0"
     var currentHeight: Float = 1.8
     var currentWeight: Float = 80
     var BMI: Float = 1
@@ -24,9 +25,13 @@ class ViewController: UIViewController {
 
     
     @IBAction func pressedCalcButton(_ sender: UIButton) {
-        print(currentHeight, currentWeight)
-        BMI = currentWeight/((currentHeight/100)*(currentHeight/100))
-        print(BMI)
+        
+        BMI = currentWeight/((currentHeight)*(currentHeight))
+        //print(BMI)
+        bmiValue = String(format: "0.2f", BMI)
+        
+        self.performSegue(withIdentifier: "toSecondVC", sender: self)
+        
     }
     
     @IBAction func changedHeightSlider(_ sender: UISlider) {
@@ -41,6 +46,12 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondVC" {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.bmiValue = bmiValue
+        }
+    }
     
     
     
