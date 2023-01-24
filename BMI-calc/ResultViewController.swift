@@ -7,17 +7,19 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ResultViewController: UIViewController {
 
-    @IBOutlet weak var tipsLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
+    var bmiValue: String?
     
-    var bmiValue = "0.0"
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var tipsLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(currentHeight, currentWeight)
+        //.currentHeight, ViewController.currentWeight)
         //BMI = currentWeight/((currentHeight/100)*(currentHeight/100))
+        //print(bmiValue)
         resultLabel.text = bmiValue
     }
     

@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="-8.3969465648854964" y="3.5211267605633805"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="HwS-TJ-L8O">
             <objects>
-                <viewController id="Zo1-Bs-ZSb" customClass="SecondViewController" customModule="BMI_calc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zo1-Bs-ZSb" customClass="ResultViewController" customModule="BMI_calc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bj-fs-khR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +208,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="XDy-zJ-h9n" id="QnF-Vc-eF1"/>
+                        <outlet property="resultLabel" destination="NnH-05-NIn" id="Cfm-dp-Ts3"/>
                         <outlet property="tipsLabel" destination="XDy-zJ-h9n" id="nY5-nU-hzs"/>
                     </connections>
                 </viewController>

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var bmiValue = "0.0"
     var currentHeight: Float = 1.8
     var currentWeight: Float = 80
-    var BMI: Float = 1
+    var bMI: Float = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,10 @@ class ViewController: UIViewController {
     
     @IBAction func pressedCalcButton(_ sender: UIButton) {
         
-        BMI = currentWeight/((currentHeight)*(currentHeight))
-        //print(BMI)
-        bmiValue = String(format: "0.2f", BMI)
+        bMI = currentWeight/((currentHeight)*(currentHeight)/10000)
+        print(bMI)
+        bmiValue = String(format: "%.1f", bMI)
+        print(bmiValue)
         
         self.performSegue(withIdentifier: "toSecondVC", sender: self)
         
@@ -48,13 +49,13 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC" {
-            let destinationVC = segue.destination as! SecondViewController
+            let destinationVC = segue.destination as! ResultViewController
             destinationVC.bmiValue = bmiValue
         }
     }
     
     
-    
+     
     
     
 }
