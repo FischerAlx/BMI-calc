@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    
+    var calculatorBrain = CalculatorBrain()
+    
     @IBOutlet weak var currentHeightLabel: UILabel!
     @IBOutlet weak var currentWeightLabel: UILabel!
     
-    var bmiValue = "0.0"
+
     var currentHeight: Float = 1.8
     var currentWeight: Float = 80
     var bMI: Float = 1
@@ -28,8 +33,10 @@ class ViewController: UIViewController {
         
         bMI = currentWeight/((currentHeight)*(currentHeight)/10000)
         print(bMI)
-        bmiValue = String(format: "%.1f", bMI)
+        bmiValue = String(format: "% .1f", bMI)
         print(bmiValue)
+        
+        calculatorBrain.calculateBMI(height: currentHeight, weight: currentWeight)
         
         self.performSegue(withIdentifier: "toSecondVC", sender: self)
         
@@ -50,7 +57,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC" {
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = bmiValue
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
         }
     }
     
