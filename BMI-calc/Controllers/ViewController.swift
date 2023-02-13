@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         bMI = currentWeight/((currentHeight)*(currentHeight)/10000)
         print(bMI)
-        bmiValue = String(format: "% .1f", bMI)
+        var bmiValue = String(format: "%.1f", bMI)
         print(bmiValue)
         
         calculatorBrain.calculateBMI(height: currentHeight, weight: currentWeight)
@@ -58,6 +58,8 @@ class ViewController: UIViewController {
         if segue.identifier == "toSecondVC" {
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     

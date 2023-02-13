@@ -12,6 +12,7 @@
 		AA1F451A294FCDEE00FEFBC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F4518294FCDEE00FEFBC1 /* Main.storyboard */; };
 		AA1F451C294FCDEF00FEFBC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1F451B294FCDEF00FEFBC1 /* Assets.xcassets */; };
 		AA1F451F294FCDEF00FEFBC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F451D294FCDEF00FEFBC1 /* LaunchScreen.storyboard */; };
+		AA3A0591299A63A600BBFEA7 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A0590299A63A600BBFEA7 /* BMI.swift */; };
 		AAE6564B2980227400352E63 /* CalculateBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE6564A2980227400352E63 /* CalculateBrain.swift */; };
 		AAE656572980254A00352E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE656552980254A00352E63 /* ViewController.swift */; };
 		AAE656582980254A00352E63 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE656562980254A00352E63 /* ResultViewController.swift */; };
@@ -25,6 +26,7 @@
 		AA1F451B294FCDEF00FEFBC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1F451E294FCDEF00FEFBC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1F4520294FCDEF00FEFBC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3A0590299A63A600BBFEA7 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		AAE6564A2980227400352E63 /* CalculateBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculateBrain.swift; path = "BMI-calc/Models/CalculateBrain.swift"; sourceTree = SOURCE_ROOT; };
 		AAE656552980254A00352E63 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAE656562980254A00352E63 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				AAE6564A2980227400352E63 /* CalculateBrain.swift */,
+				AA3A0590299A63A600BBFEA7 /* BMI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				AA1F4513294FCDEE00FEFBC1 /* AppDelegate.swift in Sources */,
 				AA1F4515294FCDEE00FEFBC1 /* SceneDelegate.swift in Sources */,
 				AAE656572980254A00352E63 /* ViewController.swift in Sources */,
+				AA3A0591299A63A600BBFEA7 /* BMI.swift in Sources */,
 				AAE6564B2980227400352E63 /* CalculateBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

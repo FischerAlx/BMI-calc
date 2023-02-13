@@ -10,6 +10,8 @@ import UIKit
 class ResultViewController: UIViewController {
 
     var bmiValue: String?
+    var advice: String?
+    var color: UIColor?
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tipsLabel: UILabel!
@@ -21,6 +23,8 @@ class ResultViewController: UIViewController {
         //BMI = currentWeight/((currentHeight/100)*(currentHeight/100))
         //print(bmiValue)
         resultLabel.text = bmiValue
+        tipsLabel.text = advice
+        view.backgroundColor = color
     }
     
     @IBAction func pressedBackButton(_ sender: Any) {
