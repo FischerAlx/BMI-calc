@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         bMI = currentWeight/((currentHeight)*(currentHeight)/10000)
         print(bMI)
-        var bmiValue = String(format: "%.1f", bMI)
+        let bmiValue = String(format: "%.1f", bMI)
         print(bmiValue)
         
         calculatorBrain.calculateBMI(height: currentHeight, weight: currentWeight)

@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="133.66666666666666"/>
                                         <color key="tintColor" red="0.039215686270000001" green="0.1137254902" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
-                                        <color key="textColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.16862745100000001" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" red="0.16862745098039217" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="shadowOffset" width="0.0" height="-3"/>
                                     </label>
